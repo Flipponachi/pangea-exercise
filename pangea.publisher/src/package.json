@@ -2,7 +2,7 @@
   "name": "pangea.publisher",
   "version": "1.0.0",
   "description": "Pangea publisher source code for related publisher activities",
-  "main": "app.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
