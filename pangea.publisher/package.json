@@ -4,7 +4,11 @@
   "description": "Pangea publisher source code for related publisher activities",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/main.js",
+    "start:dev": "nodemon dist/main.js",
+    "compile": "tsc",
+    "watch": "tsc --watch -p ./tsconfig.json",
+    "build": "tsc --project ./"
   },
   "author": "Dayo Ojo Jnr",
   "license": "ISC",
