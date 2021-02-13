@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "node dist/main.js",
-    "start:dev": "nodemon dist/main.js",
+    "start:dev": "tsc --project ./ && nodemon dist/main.js",
     "compile": "tsc",
     "watch": "tsc --watch -p ./tsconfig.json",
     "build": "tsc --project ./"

@@ -1,13 +1,13 @@
-//import mongoose from 'mongoose';
-//import dotenv from "dotenv";
+import mongoose from 'mongoose';
+import dotenv from "dotenv";
 import {expressApp} from './app';
 
 //load configuration settings
-//dotenv.config();
+dotenv.config();
 
-const PORT = 9000// process.env.PORT || 4000;
-//const MONGO_ADDRESS = process.env.MONGO_ADDRESS;
+const PORT =  process.env.PORT || 9000;
+const MONGO_ADDRESS = process.env.MONGO_ADDRESS;
 
-//mongoose.connect(MONGO_ADDRESS, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect(MONGO_ADDRESS, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
-export const server = expressApp.listen(PORT, () => console.log(`Publisher App listening on ${PORT}`));
+export const server = expressApp.listen(PORT, () => console.log(`Publisher app listening on ${PORT}`));
