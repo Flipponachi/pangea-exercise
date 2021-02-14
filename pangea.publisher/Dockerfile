@@ -8,7 +8,7 @@ RUN npm run build
 
 ## this is stage two , where the app actually runs
 FROM node:lts-alpine3.13 AS App
-ENV MONGO_ADDRESS="mongodb://localhost:27018/pangea-assignment"
+ENV MONGO_ADDRESS=$MONGO_ADDRESS
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production

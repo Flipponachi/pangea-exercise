@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import dotenv from "dotenv";
 import {expressApp} from './app';
 
-//load configuration settings
 dotenv.config();
 
 const MONGO_ADDRESS = process.env.MONGO_ADDRESS;
