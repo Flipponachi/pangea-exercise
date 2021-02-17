@@ -1,0 +1,27 @@
+version: "3"
+
+services: 
+  mongodb:
+    image: mongo
+    ports: 
+     - "27018:27018"
+  
+  pangea-publisher:
+    image: flipponachi/pangea-publisher
+    environment: 
+     - MONGO_ADDRESS=mongodb://mongodb/compose-test
+    depends_on: 
+     - mongodb
+    ports: 
+    - "9000:9000"
+  
+  pangea-subscriber:
+    image: flipponachi/pangea-subscriber
+    depends_on: 
+    - mongodb
+    ports:
+    - "4000:4000"
+
+
+    
+  
